@@ -6,21 +6,18 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/MainScene.fxml"));
+	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/StackPaneScene.fxml"));
 	Parent root = fxmlLoader.load();
-	stage.setScene(new Scene(root));
-//	stage.setTitle("Hello world!");
-//	stage.setWidth(300);
-//	stage.setHeight(200);
-//
-//	setIcon(stage);
-//	stage.setScene(getLabeledScene("Label!"));
+	stage.setScene(new Scene(root, 300, 200));
 	stage.show();
     }
 
